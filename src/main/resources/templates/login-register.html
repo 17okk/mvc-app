@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../static/css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login & Registration</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h2 class="logo">UNCG Esports</h2>
+    <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <button class="btnLogin-popup">Login</button>
+    </nav>
+</header>
+
+<div class="wrapper">
+    <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+
+    <!-- Login Form -->
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="/login" method="post" id="login-form">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" id="login-email" required aria-label="Email" aria-describedby="emailHelp">
+                <label for="login-email">Email</label>
+                <small id="emailHelp" class="error-message"></small>
+            </div>
+
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" id="login-password" required aria-label="Password" aria-describedby="passwordHelp">
+                <label for="login-password">Password</label>
+                <small id="passwordHelp" class="error-message"></small>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+
+            <div class="login-register">
+                <p>Don't have an account?
+                    <a href="#" class="register-link">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="form-box register">
+        <h2>Registration</h2>
+        <form action="/register" method="post" id="register-form">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="people-circle"></ion-icon></span>
+                <input type="text" id="register-username" required aria-label="Username" aria-describedby="usernameHelp">
+                <label for="register-username">Username</label>
+                <small id="usernameHelp" class="error-message"></small>
+            </div>
+
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" id="register-email" required aria-label="Email" aria-describedby="emailRegisterHelp">
+                <label for="register-email">Email</label>
+                <small id="emailRegisterHelp" class="error-message"></small>
+            </div>
+
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" id="register-password" required aria-label="Password" aria-describedby="passwordRegisterHelp">
+                <label for="register-password">Password</label>
+                <small id="passwordRegisterHelp" class="error-message"></small>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox" required>I agree to the terms & conditions</label>
+            </div>
+            <button type="submit" class="btn">Register</button>
+
+            <div class="login-register">
+                <p>Already have an account?
+                    <a href="#" class="login-link">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<script src="../static/js/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
